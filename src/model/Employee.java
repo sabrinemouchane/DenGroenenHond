@@ -1,53 +1,57 @@
 package model;
 
-import java.util.Set;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 
-// Klasse voor Persoonlslid
-class Employee extends Person {
-    private String employeeId;
-    private Set<String> skills; // Set voor unieke vaardigheden
+public class Employee extends Person {
+    private static int employeeCounter = 100;
+    private final int employeeId;
+    private List<String> skills;
 
-    public Employee(String name, String address, String email,String phone){
-      super(name, address, email, phone);
-      this.employeeId = generateEmployeeId();
-      this.skills = new HashSet<>();
+    public Employee(String name, String address, String email, String phone) {
+        super(name, address, email, phone);
+        this.employeeId = ++employeeCounter;
+        this.skills = new ArrayList<>();
     }
 
-    private String generateEmployeeId(){
-        return "EMP" + System.currentTimeMillis() % 10000;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
-    //Vaardigheden beheren
-    public void addSkill(String skill){
-        skills.add(skill.toLowerCase());
+    public List<String> getSkills() {
+        return new ArrayList<>(skills);
     }
 
-    public boolean hasSkill(String skill){
-        return skills.contains(skill.toLowerCase());
+    public void addSkill(String skill) {
+        if (skill == null || skill.trim().isEmpty()) {
+            throw new IllegalArgumentException("Skill mag niet leeg zijn");
+        }
+        if (!skills.contains(skill.trim())) {
+            skills.add(skill.trim());
+        }
+    }
+
+    public boolean hasSkill(String skill) {
+        return skills.contains(skill);
     }
 
     public void removeSkill(String skill) {
-        skills.remove(skill.toLowerCase());
+        skills.remove(skill);
     }
-
-    public Set<String> getSkills(){
-        return new HashSet<>(skills); // Retrun copy
-    }
-
-    // Specifieke vaardigheden controleren
-    public boolean canDriveVan() {
-        return hasSkill("rijbewijs bestelwagen");
-    }
-
-    public boolean canDriveTruck() {
-        return hasSkill("rijbewijs vrachtwagen");
-    }
-
-    public String getEmployeeId() { return employeeId;}
 
     @Override
     public String toString() {
-        return getName() + " (ID: " + employeeId + ") - Vaardigheden: " + skills;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Medewerker ID: ").append(employeeId).append("\n")
+                .append(super.toString()).append("\n")
+                .append("Vaardigheden: ");
+
+        if (skills.isEmpty()) {
+            sb.append("Geen");
+        } else {
+            sb.append(String.join(", ", skills));
+        }
+
+        return sb.toString();
     }
 }
