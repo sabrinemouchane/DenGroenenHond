@@ -17,10 +17,6 @@ public class Main {
     public static void main(String[] args) {
         // Kies 1 van de 2 opties hieronder:
 
-        // OPTIE 1: TEST ALLES AUTOMATISCH (voor demo)
-        // runAlleTesten();
-
-        // OPTIE 2: TOON MENU (voor eindgebruiker)
         System.out.println("=== DEN GROENEN HOND - PLANTENCENTRUM ===");
         System.out.println("Project: Bestellingen en Leveringen\n");
         toonHoofdmenu();
@@ -114,10 +110,6 @@ public class Main {
             System.out.println("4. Plant toevoegen aan bestelling");
             System.out.println("5. Bestelling afronden en bestelbon afdrukken");
             System.out.println("6. Alle klanten tonen");
-            System.out.println("7. Alle personeelsleden tonen");
-            System.out.println("8. Alle planten tonen");
-            System.out.println("9. Alle bestellingen tonen");
-            System.out.println("10. Testmodus uitvoeren");
             System.out.println("0. Afsluiten");
             System.out.println("=======================================");
 
@@ -141,18 +133,6 @@ public class Main {
                     break;
                 case 6:
                     viewAllCustomers();
-                    break;
-                case 7:
-                    viewAllEmployees();
-                    break;
-                case 8:
-                    viewAllPlants();
-                    break;
-                case 9:
-                    viewAllOrders();
-                    break;
-                case 10:
-                    runAlleTesten();
                     break;
                 case 0:
                     System.out.println("Applicatie wordt afgesloten...");

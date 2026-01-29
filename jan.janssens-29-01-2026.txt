@@ -1,0 +1,35 @@
+=======================================
+        DEN GROENEN HOND
+        Bestelbon
+=======================================
+
+Bestelling ID: 100001
+Besteldatum: 29/01/2026
+Leverdatum: 30/01/2026
+
+Klantgegevens:
+--------------
+Klant ID: 1001
+Naam: Jan Janssens
+Adres: Dorpsstraat 1, 8000 Brugge
+Email: jan.janssens@email.com
+Telefoon: 050 12 34 56
+
+Bestelde planten:
+-----------------
+- Gepakte Eik
+  Artikel: PL10001
+  Type: Boom
+  Prijs: €149,99
+
+Samenvatting:
+-------------
+Aantal planten: 1
+Totaalprijs: €149,99
+Totaal volume: 1,26 m³
+Vervoer nodig: Speciaal transport nodig
+Toegewezen chauffeur: Thomas Verstraete
+
+=======================================
+Bedankt voor uw bestelling!
+=======================================

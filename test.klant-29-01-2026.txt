@@ -1,0 +1,45 @@
+=======================================
+        DEN GROENEN HOND
+        Bestelbon
+=======================================
+
+Bestelling ID: 100002
+Besteldatum: 29/01/2026
+Leverdatum: 30/01/2026
+
+Klantgegevens:
+--------------
+Klant ID: 1007
+Naam: Test Klant
+Adres: Teststraat 1, 8000 Brugge
+Email: test@test.be
+Telefoon: 000000000
+
+Bestelde planten:
+-----------------
+- Eik
+  Artikel: PL10011
+  Type: Boom
+  Prijs: €24,99
+
+- Roos
+  Artikel: PL10012
+  Type: Struik
+  Prijs: €12,50
+
+- Beuk
+  Artikel: PL10013
+  Type: Boom
+  Prijs: €45,00
+
+Samenvatting:
+-------------
+Aantal planten: 3
+Totaalprijs: €82,49
+Totaal volume: 0,52 m³
+Vervoer nodig: Bestelwagen
+Toegewezen chauffeur: Thomas Verstraete
+
+=======================================
+Bedankt voor uw bestelling!
+=======================================
